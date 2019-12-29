@@ -1,5 +1,6 @@
 resource "aws_instance" "rails-app-server" {
   ami                         = "ami-0cd744adeca97abb1"
+  availability_zone           = "ap-northeast-1a"
   associate_public_ip_address = true
   instance_type               = "t2.micro"
   subnet_id                   = aws_subnet.rails-app-subnet.id
@@ -7,6 +8,9 @@ resource "aws_instance" "rails-app-server" {
   key_name                    = aws_key_pair.developer.key_name
   ebs_optimized               = false
   monitoring                  = false
+  vpc_security_group_ids      = [
+    aws_security_group.rails-app-sg.id
+  ]
   credit_specification {
     cpu_credits = "standard"
   }
