@@ -47,3 +47,27 @@ Are you sure you want to continue connecting (yes/no)? yes
 
 ubuntu@ip-yyy-yyy-yyy-yyy:~$ 
 ```
+
+## 壊し方
+```Shell
+$ terraform destroy
+var.access-key
+  Enter a value: hoge
+
+var.secret-key
+  Enter a value: piyo
+
+...
+
+Plan: 0 to add, 0 to change, 9 to destroy.
+
+Do you really want to destroy all resources?
+  Terraform will destroy all your managed infrastructure, as shown above.
+  There is no undo. Only 'yes' will be accepted to confirm.
+
+  Enter a value: yes
+
+...
+
+Destroy complete! Resources: 9 destroyed.
+```
