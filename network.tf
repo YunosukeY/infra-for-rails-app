@@ -39,10 +39,3 @@ resource "aws_route" "rails-app-route-igw" {
   gateway_id             = aws_internet_gateway.rails-app-gw.id
   depends_on             = [aws_route_table.rails-app-rt]
 }
-
-resource "aws_eip" "rails-app-eip" {
-  instance = aws_instance.rails-app-server.id
-  tags = {
-    "Name" = "rails-app-elastic-ip"
-  }
-}
