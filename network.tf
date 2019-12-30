@@ -1,30 +1,30 @@
 resource "aws_vpc" "rails-app-vpc" {
   cidr_block = "10.0.0.0/16"
   tags       = {
-    "Name" = "VPC_for_kimitsu"
+    "Name" = "my-vpc"
   }
 }
 
 resource "aws_subnet" "rails-app-subnet" {
-  availability_zone = "ap-northeast-1a"
+  availability_zone = var.az
   cidr_block        = "10.0.0.0/24"
   vpc_id            = aws_vpc.rails-app-vpc.id
   tags              = {
-    "Name" = "kimitsu-subnet1"
+    "Name" = "my-subnet"
   }
 }
 
 resource "aws_internet_gateway" "rails-app-gw" {
   vpc_id = aws_vpc.rails-app-vpc.id
   tags   = {
-    "Name" = "gateway_for_kimitsu"
+    "Name" = "my-gateway"
   }
 }
 
 resource "aws_route_table" "rails-app-rt" {
   vpc_id = aws_vpc.rails-app-vpc.id
   tags = {
-    Name = "table_for_kimitsu1"
+    Name = "my-rt"
   }
 }
 
