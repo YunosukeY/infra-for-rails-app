@@ -18,7 +18,7 @@ var.secret-key
 
 ...
 
-Plan: 9 to add, 0 to change, 0 to destroy.
+Plan: 8 to add, 0 to change, 0 to destroy.
 
 Do you want to perform these actions?
   Terraform will perform the actions described above.
@@ -28,16 +28,22 @@ Do you want to perform these actions?
 
 ...
 
-Apply complete! Resources: 9 added, 0 changed, 0 destroyed.
+Apply complete! Resources: 8 added, 0 changed, 0 destroyed.
 
 Outputs:
 
 instance-ip = xxx.xxx.xxx.xxx
-
 ```
 
 3. 接続  
   表示されたIPを使ってssh接続
 ```Shell
 $ ssh ubuntu@xxx.xxx.xxx.xxx
+The authenticity of host 'xxx.xxx.xxx.xxx (xxx.xxx.xxx.xxx)' can't be established.
+ECDSA key fingerprint is SHA256:...
+Are you sure you want to continue connecting (yes/no)? yes
+
+...
+
+ubuntu@ip-yyy-yyy-yyy-yyy:~$ 
 ```
