@@ -1,0 +1,6 @@
+- hosts: rails_app
+  remote_user: ubuntu
+  become: yes
+  roles:
+    - bases
+    - geerlingguy.docker
