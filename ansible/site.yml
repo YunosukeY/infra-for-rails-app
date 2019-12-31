@@ -1,1 +1,1 @@
-- import_playbook: rails-app.yml
+- import_playbook: rails_app.yml

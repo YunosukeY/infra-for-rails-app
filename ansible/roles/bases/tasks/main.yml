@@ -1,11 +1,9 @@
 - name: apt-get update
-  become: true
   apt:
     update_cache: yes
     upgrade: yes
 
 - name: install packages
-  become: true
   apt:
     name:
       - apt-transport-https

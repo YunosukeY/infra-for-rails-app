@@ -71,7 +71,7 @@
     1. 準備  
         対象ホストを指定します
         ```
-        $ echo 3.112.204.225 >> ../ansible/hosts
+        $ echo xxx.xxx.xxx.xxx >> ../ansible/hosts
         ```
     2. Playbookを実行します
         ```
