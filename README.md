@@ -8,7 +8,7 @@
         amiは更新されると思いますし、pubic-keyは筆者がSSHできるようになってしまうので必ず自分のものにしてください
     2. インフラを構築  
         成功するとインスタンスのIPが表示されます
-        ```Shell
+        ```
         $ cd terraform
         $ terraform init
         
@@ -56,7 +56,7 @@
         ```
     3. 確認   
         表示されたIPを使って接続してみます
-        ```Shell
+        ```
         $ ssh ubuntu@xxx.xxx.xxx.xxx
         The authenticity of host 'xxx.xxx.xxx.xxx (xxx.xxx.xxx.xxx)' can't be established.
         ECDSA key fingerprint is SHA256:...
@@ -70,11 +70,11 @@
 2. Ansible
     1. 準備  
         対象ホストを指定します
-        ```Shell
+        ```
         $ echo 3.112.204.225 >> ../ansible/hosts
         ```
     2. Playbookを実行します
-        ```Shell
+        ```
         $ cd ../ansible
         $ ansible-playbook site.yml -i hosts
         
@@ -85,7 +85,7 @@
         ```
     3. 確認  
         SSHしてDockerとDocker-Composeがインストールされていることを確認します
-        ```Shell
+        ```
         $ ssh ubuntu@xxx.xxx.xxx.xxx
         ubuntu@ip-yyy-yyy-yyy-yyy:~$ docker --version
         Docker version 19.03.5, build 633a0ea838
@@ -95,7 +95,7 @@
         これで完了です
 
 ## 壊し方
-```Shell
+```
 $ cd terraform
 $ terraform destroy
 
